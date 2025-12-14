@@ -17,7 +17,16 @@ const dict = {
     woundsTreated: (names, qs, bonusString) => `<b>${names}</b> has/have been treated and receive <b>${qs}${bonusString ?? ''}</b> health regeneration.`,
     painTreated: (names, qs) => `<b>${names}</b> has/have been treated and receive <b>${qs}</b> level(s) of pain treatment.`,
   },
-}[game.i18n.lang == 'de' ? 'de' : 'en'];
+  fr: {
+    powerFullHealer: 'Powerful Healer',
+    treatWounds: 'Treat Wounds',
+    treatPain: 'Treat Pain',
+    tooltip: (bonus) => `Gains an additional +${bonus} health regeneration from Powerful Healer.`,
+    description: (bonusString) => `<b>Treat Wounds</b>: All targets receive a bonus of <b>${qs}${bonusString ?? ''}</b> on the next regeneration.</br><b>Treat Pain</b>: For each QS, one level of pain can be treated on the targets.`,
+    woundsTreated: (names, qs, bonusString) => `<b>${names}</b> has/have been treated and receive <b>${qs}${bonusString ?? ''}</b> health regeneration.`,
+    painTreated: (names, qs) => `<b>${names}</b> has/have been treated and receive <b>${qs}</b> level(s) of pain treatment.`,
+  },
+}[game.i18n.lang == 'de' ? 'de' : game.i18n.lang == 'en' ? 'en': 'fr'];
 
 class TreatWounds extends foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2) {
   constructor(actor, source, qs) {
