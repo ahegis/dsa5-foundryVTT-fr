@@ -49,7 +49,7 @@ export default class DSA5_Utility {
   }
 
   static getLanguagePack() {
-    return game.i18n.lang === 'de' ? 'dsa5.skills' : 'dsa5.skillsen';
+    return game.i18n.lang === 'de' ? 'dsa5.skills' : game.i18n.lang == 'en' ? 'dsa5.skillsen' : 'dsa5.skillsfr';
   }
 
   static async getCompendiumEntries(compendium, itemType) {

@@ -4,7 +4,7 @@ const { getProperty } = foundry.utils;
 
 Hooks.once('i18nInit', async () => {
   if (!CreatureType.creatureData) {
-    const lang = game.i18n.lang == 'de' ? 'de' : 'en';
+    const lang = game.i18n.lang == 'de' ? 'de' : game.i18n.lang == 'en' ? 'en' : 'fr';
     const json = await fetch(`systems/dsa5/lazy/creaturetype/${lang}.json`);
     CreatureType.creatureData = await json.json();
     CreatureType.magical = localize('WEAPON.magical');

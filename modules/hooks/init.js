@@ -150,7 +150,7 @@ Hooks.once('setup', () => {
     showForbiddenLanguageDialog();
   } else {
     const forceLanguage = game.settings.get('dsa5', 'forceLanguage');
-    if (['de', 'en'].includes(forceLanguage) && game.i18n.lang != forceLanguage) showWrongLanguageDialog(forceLanguage);
+    if (['de', 'en', 'fr'].includes(forceLanguage) && game.i18n.lang != forceLanguage) showWrongLanguageDialog(forceLanguage);
   }
 
   BookWizard.initHook();
@@ -206,6 +206,15 @@ const showForbiddenLanguageDialog = () => {
         label: 'de',
         callback: async () => {
           await game.settings.set('core', 'language', 'en');
+          foundry.utils.debouncedReload();
+        },
+      },
+      {
+        action: 'fr',
+        icon: 'fas fa-check',
+        label: 'de',
+        callback: async () => {
+          await game.settings.set('core', 'language', 'fr');
           foundry.utils.debouncedReload();
         },
       },

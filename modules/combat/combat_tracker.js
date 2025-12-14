@@ -38,8 +38,10 @@ export class DSA5CombatTracker extends foundry.applications.sidebar.tabs.CombatT
     if (DSA5_Utility.moduleEnabled('dsa5-core')) {
       if (game.i18n.lang == "de")
         game.dsa5.apps.journalBrowser.loadBookAndPage("Grundregelwerk", "Kampf", "books", 'Regeln');
-      else
+      else if (game.i18n.lang == "en")
         game.dsa5.apps.journalBrowser.loadBookAndPage("Core rules", "Combat", "books", 'Rules');
+      else
+        game.dsa5.apps.journalBrowser.loadBookAndPage("Règles principales", "Combat", "livre", 'Règles');
     }
   }
 

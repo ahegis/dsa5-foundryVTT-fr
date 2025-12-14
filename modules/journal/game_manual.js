@@ -5,7 +5,14 @@ export default function registerGameManual() {
       path: 'systems/dsa5/modules/journal/bookde.json',
       visible: true,
     });
-  } else {
+  } else if (game.i18n.lang == 'en'){
+    game.dsa5.apps.journalBrowser.manuals.push({
+      id: 'Game Manual (Foundry VTT)',
+      path: 'systems/dsa5/modules/journal/booken.json',
+      visible: true,
+    });
+  }
+  else {
     game.dsa5.apps.journalBrowser.manuals.push({
       id: 'Game Manual (Foundry VTT)',
       path: 'systems/dsa5/modules/journal/booken.json',

@@ -495,6 +495,7 @@ export function setupConfiguration() {
         none: '-',
         de: 'German',
         en: 'English',
+        fr: 'French'
       },
     },
     hotbarv3: {

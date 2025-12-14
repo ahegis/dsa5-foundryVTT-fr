@@ -45,10 +45,10 @@ export default class DSA5Combatant extends Combatant {
 
   async getBrawlingTable() {
     if (!this.brawlingTable) {
-      const pack = game.packs.get(game.i18n.lang == 'de' ? 'dsa5.patzer' : 'dsa5.botch');
+      const pack = game.packs.get(game.i18n.lang == 'de' ? 'dsa5.patzer' : game.i18n.lang == 'en' ? 'dsa5.botch' : 'dsa5.tables');
       const table = (
         await pack.getDocuments({
-          name__in: [game.i18n.lang == 'de' ? 'Prügelei - Verletzungen' : 'Brawling - Injuries'],
+          name__in: [game.i18n.lang == 'de' ? 'Prügelei - Verletzungen' : game.i18n.lang == 'en' ? 'Brawling - Injuries' : 'Bagarre - Blessures'],
         })
       )[0];
       this.brawlingTable = table;

@@ -94,6 +94,36 @@
             "system": "dsa5",
             "path": "packs/macros.db",
             "type": "Macro"
+        },
+        {
+            "name": "gamemanualfr",
+            "label": "Game Manual",
+            "system": "dsa5",
+            "path": "packs/gamemanualfr.db",
+            "type": "JournalEntry",
+            "flags": {
+                "dsalang": "fr"
+            }
+        },
+        {
+            "name": "skillsfr",
+            "label": "Basic elements",
+            "system": "dsa5",
+            "path": "packs/skillsfr.db",
+            "type": "Item",
+            "flags": {
+                "dsalang": "fr"
+            }
+        },
+        {
+            "name": "tables",
+            "label": "Tables",
+            "system": "dsa5",
+            "path": "packs/tables.db",
+            "type": "RollTable",
+            "flags": {
+                "dsalang": "fr"
+            }
         }
     ],
     "languages": [
@@ -106,6 +136,11 @@
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Francais",
+            "path": "lang/fr.json"
         }
     ],
     "background": "systems/dsa5/icons/githublogo.webp",

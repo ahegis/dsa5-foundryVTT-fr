@@ -48,8 +48,8 @@ export default function () {
   });
 
   Hooks.once('renderCompendiumDirectory', (app, html, data) => {
-    const toRemove = game.i18n.lang == 'de' ? 'en' : 'de';
-    const packsToRemove = game.packs.filter((p) => getProperty(p.metadata, 'flags.dsalang') == toRemove);
+    const toRemove = game.i18n.lang == 'de' ? ['en', 'fr'] : game.i18n.lang == 'en' ? ['de', 'fr'] : ['en', 'de'];
+    const packsToRemove = game.packs.filter((p) => toRemove.includes(getProperty(p.metadata, 'flags.dsalang')));
 
     for (let pack of packsToRemove) {
       const id = pack.metadata.id;
