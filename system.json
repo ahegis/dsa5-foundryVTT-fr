@@ -3,7 +3,7 @@
     "title": "L'Oeil Noir (5e Edition)",
     "description": "The \"Das Schwarze Auge\" system for Foundry VTT. Includes all relevant mechanisms to play in the wonderous world of Aventuria and Das Schwarze Auge/The Dark Eye.",
     "version": "7.3.5",
-    "download": "https://github.com/ahegis/dsa5-foundryVTT-fr/archive/refs/head/foundry13.zip",
+    "download": "https://github.com/ahegis/dsa5-foundryVTT-fr/archive/refs/heads/foundry13.zip",
     "authors": [
         {
             "name": "Plushtoast"
@@ -492,3 +492,4 @@
     }
 
 }
+
